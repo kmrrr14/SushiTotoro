@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="./css/main.css">
+   
+</head>
+<header>
+    <nav>
+        <img src="./img/Logo.png" alt="Sushi in a shape of Totoro">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./AboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <h1>Menu</h1>
+
+    <button type="button" class="collapsible"><h2>Sushi Combination and Plates</h2></button>
+    <div class="content">
+        <h3>Nigiri 6pcs & California or Spicy Tuna Roll $17</h3>
+        <h3>Nigiri 6pcs &  1 Special Roll $20</h3>
+        <h3>Vegetarian  Sushi $16</h3>
+            <p>Choose between Veggie Crunch or Futo Roll, and Choice of Two Veggie Rolls.</p>
+        <h3>3 Roll Combination $16</h3>
+            <p>2 Regular Roll + 1 Special Roll $19</p>
+            <p>1 Regular Roll + 2 Special Roll $21</p>
+        <h3>Sashimi Appetizer 6pcs $12</h3>
+            <p>Tuna, Salmon, Yellowtail</p>
+        <h3>Sashimi Combo 10pcs $22</h3>
+            <p>Chef's Special, and Sushi Rice</p>
+        <h3>Chirashi $21</h3>
+            <p>Bowl of rice mixed with fish</p>
+        <h3>Sushi & Entrée Combo $20</h3>
+            <p>1 Sushi from Sushi & 2 from Kitchen</p>
+            <p>Sushi: Nigiri 4pcs, Sashimi 4pcs, 1 Regular Roll, or 1 Vegetable Roll</p>
+            <p>Kitchen: Agedashi Tofu, Beef Teriyaki, Chicken Teriyaki, Chicken Katsu, Don Katsu, Gyoza, Ika Ring, Salmon Teriyaki, Mixed Tempura</p>
+    </div>
+
+    <button type="button" class="collapsible"><h2>Appetizer</h2></button>
+    <div class="content">
+        <h3>Edamame $5</h3>
+        <p>Steamed Soy Beans with Salt</p>
+        <h3>Spicy Edamame $6</h3>
+        <p>Steamed Soy Beans with Spicy Sauce</p>
+        <h3>Gyoza $7</h3>
+        <p>Chicken Potsticker 6pcs.</p>
+        <h3>Baked Mussels $8</h3>
+        <p>Green Mussels Baked with Spicy Mayo, 6pcs.</p>
+    </div>
+
+    
+    <button type="button" class="collapsible"><h2>Noodles</h2></button>
+    <div class="content">
+        <h3>Udon</h3>
+        <p>Udon Noodles with Udon Soup</p>
+    </div>
+
+    <footer>
+        <div id="footLeft">
+            <p>Hours:</p>
+            <p>Monday - Saturday:</p>
+            <p>11:30 AM - 2:30 PM</p>
+            <p>4:30 PM - 10:00 PM</p>
+        </div>
+        <div id="footRight">
+           <p> Contact Us: (303) 766-0045</p>
+           <p>4243 S Buckley Rd, Aurora, CO 80013</p>
+        </div>
+    </footer>
+
+    <script> 
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+        }
+    </script>
+    
+
+</body>
+</html>
